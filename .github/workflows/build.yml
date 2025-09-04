@@ -89,28 +89,18 @@ jobs:
       run: |
         cd build && ninja
         
-    - name: Create Linux package directory
-      run: |
-        mkdir aseprite-linux
-        cp aseprite/build/bin/aseprite aseprite-linux/
-        cp -r aseprite/licenses/ aseprite-linux/
-        # 添加其他需要打包的文件
+    
 
     - name: Upload Linux binary as artifact
       uses: actions/upload-artifact@v4
       with:
         name: aseprite-linux
-        path: aseprite-linux/
+        path: aseprite/build/bin/aseprite
 
-    - name: Create Windows package directory
-      run: |
-        mkdir aseprite-windows
-        copy aseprite\build\bin\aseprite.exe aseprite-windows\
-        xcopy /E /I aseprite\licenses aseprite-windows\licenses\
-        # 添加其他需要打包的文件
+    
 
     - name: Upload Windows binary as artifact
       uses: actions/upload-artifact@v4
       with:
         name: aseprite-windows
-        path: aseprite-windows/
+        path: aseprite/build/bin/aseprite.exe
