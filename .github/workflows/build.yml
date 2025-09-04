@@ -91,7 +91,7 @@ jobs:
         
     - name: Create Linux package directory
       run: |
-        mkdir -p aseprite-linux
+        mkdir aseprite-linux
         cp aseprite/build/bin/aseprite aseprite-linux/
         cp -r aseprite/licenses/ aseprite-linux/
         # 添加其他需要打包的文件
