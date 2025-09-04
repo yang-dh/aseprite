@@ -97,7 +97,7 @@ jobs:
         # 添加其他需要打包的文件
 
     - name: Upload Linux binary as artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: aseprite-linux
         path: aseprite-linux/
@@ -110,7 +110,7 @@ jobs:
         # 添加其他需要打包的文件
 
     - name: Upload Windows binary as artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: aseprite-windows
         path: aseprite-windows/
